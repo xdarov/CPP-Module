@@ -1,10 +1,10 @@
-NAME =							phonebook
+NAME =							zombie
 
-SRCS =							main.cpp Contact.cpp Phonebook.cpp
+SRCS =							main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ_DIR =						obj
 
-HEADERS =						Contact.hpp Phonebook.hpp
+HEADERS =						Zombie.hpp
 
 OBJ =							$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 

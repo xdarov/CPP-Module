@@ -1,16 +1,16 @@
-NAME =							phonebook
+NAME =							zombie
 
-SRCS =							main.cpp Contact.cpp Phonebook.cpp
+SRCS =							main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJ_DIR =						obj
 
-HEADERS =						Contact.hpp Phonebook.hpp
+HEADERS =						Zombie.hpp
 
 OBJ =							$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
 CC =							c++
 
-FLAGS =							-Wall -Wextra -Werror -std=c++98
+FLAGS =							#-Wall -Wextra -Werror -std=c++98
 
 .PHONY:							all clean makelibft fclean re
 
