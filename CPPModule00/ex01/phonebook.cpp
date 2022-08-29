@@ -7,7 +7,7 @@ PhoneBook::~PhoneBook(){}
 char *PhoneBook::get_input(char *message)
 {
     memset(buf, '\0', 1026);
-    while (buf[0] == '\0')
+    while (buf[0] == '\0' && !std::cin.eof())
     {
         std::cout << message << std::endl;
         std::cin.getline(buf, 1024);
@@ -34,15 +34,10 @@ void PhoneBook::get_new_contact()
         else if (i == 7)
             i = shift_contacts();
     strcpy(contacts[i].first_name, get_input((char *)"fill name"));
-    std::cout << contacts[i].first_name << std::endl;
     strcpy(contacts[i].last_name, get_input((char *)"last name"));
-    std::cout << contacts[i].last_name << std::endl;
     strcpy(contacts[i].nickname, get_input((char *)"nickname"));
-    std::cout << contacts[i].nickname << std::endl;
     strcpy(contacts[i].phone_number, get_input((char *)"phone number"));
-    std::cout << contacts[i].phone_number << std::endl;
     strcpy(contacts[i].darkest_secret, get_input((char *)"darkest secret"));
-    std::cout << contacts[i].darkest_secret << std::endl;
 }
 
 bool PhoneBook::check_int()
@@ -68,7 +63,6 @@ bool PhoneBook::check_int()
 
 void PhoneBook::fill_out_contact(char *ceil)
 {
-    std::cout << 10 - strlen(ceil) << std::endl;
     if (10 - (int)strlen(ceil) > 0)
         strlcpy(&buf[strlen(buf)], "          ", 11 - strlen(ceil));
     strlcpy(&buf[strlen(buf)], ceil, 11);
@@ -99,24 +93,4 @@ void PhoneBook::show_contact()
     }
 }
 
-int main()
-{
-    PhoneBook phonebook;
-    char commands[1025];
-    while (true)
-    {
-        strcpy(commands, PhoneBook().get_input((char *)"Enter the command"));
-        if (strncmp(commands, "ADD", 4) == 0)
-            phonebook.get_new_contact();
-        else if (strncmp(commands, "SEARCH", 7) == 0)
-        {
-            std::cout << "SEARCH" << std::endl;
-            phonebook.show_contact();
-        }
-        else if (strncmp(commands, "EXIT", 5) == 0)
-            break;
-        else
-            std::cout << "WRONG COMMAND!!!" << std::endl;
-    }
-    return 0;
-}
+

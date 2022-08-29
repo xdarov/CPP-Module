@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 class Megaphone
 {
     public:
@@ -19,22 +17,23 @@ class Megaphone
 
         if (text[0] == NULL)
         {
-            cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
+            std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
             return ;
         }
         while (text[++i])
         {
             j = -1;
             while (text[i][++j])
-                cout << (char)toupper(text[i][j]);
-            cout << ' ';
+                std::cout << (char)toupper(text[i][j]);
+            std::cout << ' ';
         }
-        cout << endl;
+        std::cout << std::endl;
     }
 };
 
 int main(int argc, char **argv)
 {
+    (void)argc;
     Megaphone some_megaphone(&argv[1]);
     some_megaphone.get_upper_text();
     return 0;
