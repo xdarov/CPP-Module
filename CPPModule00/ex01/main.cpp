@@ -10,10 +10,7 @@ int main()
         if (strncmp(commands, "ADD", 4) == 0)
             phonebook.get_new_contact();
         else if (strncmp(commands, "SEARCH", 7) == 0)
-        {
-            std::cout << "SEARCH" << std::endl;
             phonebook.show_contact();
-        }
         else if (strncmp(commands, "EXIT", 5) == 0 || std::cin.eof())
         {
             std::cout << "GOOD BY" << std::endl;

@@ -1,10 +1,10 @@
 NAME =							phonebook
 
-SRCS =							main.cpp contact.cpp phonebook.cpp
+SRCS =							tests.cpp Account.cpp
 
 OBJ_DIR =						obj
 
-HEADERS =						contact.hpp phonebook.hpp
+HEADERS =						Account.hpp
 
 OBJ =							$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
