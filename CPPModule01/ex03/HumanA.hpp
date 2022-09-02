@@ -6,7 +6,7 @@
 class HumanA
 {
     std::string name;
-    Weapon *weapon;
+    Weapon &weapon;
 
     public:
     HumanA(const char *name, Weapon &weapon);

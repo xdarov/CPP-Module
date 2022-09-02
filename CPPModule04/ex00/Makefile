@@ -1,16 +1,16 @@
-NAME =							humans
+NAME =							run
 
-SRCS =							main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS =							main.cpp Animal.cpp Dog.cpp Cat.cpp
 
 OBJ_DIR =						obj
 
-HEADERS =						HumanA.hpp HumanB.hpp Weapon.hpp
+HEADERS =						Animal.hpp Dog.hpp Cat.hpp
 
 OBJ =							$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
 CC =							c++
 
-FLAGS =							-Wall -Wextra -Werror -std=c++98
+FLAGS =							#-Wall -Wextra -Werror -std=c++98
 
 .PHONY:							all clean makelibft fclean re
 

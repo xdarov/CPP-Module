@@ -8,7 +8,7 @@ int main()
 
     Zombie *zombie_Jon = new Zombie(std::string("Jon"));
 
-    Zombie *horde = zombieHorde(count ,std::string("plague_zombie_"));
+    Zombie *horde = zombieHorde(-1 ,std::string("plague_zombie_"));
 
     while (++i < count)
         horde[i].announce();

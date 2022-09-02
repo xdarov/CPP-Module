@@ -10,7 +10,7 @@ OBJ =							$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
 CC =							c++
 
-FLAGS =							#-Wall -Wextra -Werror -std=c++98
+FLAGS =							-Wall -Wextra -Werror -std=c++98
 
 .PHONY:							all clean makelibft fclean re
 
