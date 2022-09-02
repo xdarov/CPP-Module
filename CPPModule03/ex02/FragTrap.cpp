@@ -1,30 +1,25 @@
-#include  "ScavTrap.hpp"
+#include  "FragTrap.hpp"
 
-ScavTrap::ScavTrap()
+FragTrap::FragTrap()
 {
-    std::cout << "New default ScavTrap " << std::endl;
+    std::cout << "New default FragTrap " << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+FragTrap::FragTrap(std::string name)
 {
-    std::cout << "New ScavTrap " << name << std::endl;
+    std::cout << "New FragTrap " << name << std::endl;
     this->name = name;
     this->energy = 50;
     this->hit_points = 100;
     this->attack_damage = 20;
 }
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-    std::cout << "Destroy ScavTrap " << name << std::endl;
+    std::cout << "Destroy FragTrap " << name << std::endl;
 }
 
-void ScavTrap::guardGate()
-{
-    std::cout << name << " : I'm in Gatekeeper Mode" << std::endl;
-}
-
-void ScavTrap::attack(const std::string& target)
+void FragTrap::attack(const std::string& target)
 {
     if (this->energy > 0 && this->hit_points > 0)
     {
@@ -36,14 +31,14 @@ void ScavTrap::attack(const std::string& target)
 
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
+FragTrap::FragTrap(const FragTrap &other)
 {
     std::cout << "Copy Builder " << other.name << std::endl;
     *this = other;
 }
 
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+FragTrap &FragTrap::operator=(const FragTrap &other)
 {
     std::cout << "Assignment " << other.name << std::endl;
     this->name = other.name;
@@ -51,4 +46,9 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
     this->energy = other.hit_points;
     this->attack_damage = other.attack_damage;
     return *this;
+}
+
+void FragTrap::highFivesGuys()
+{
+        std::cout << name << ": High-five me" << std::endl;
 }

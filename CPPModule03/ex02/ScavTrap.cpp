@@ -29,10 +29,10 @@ void ScavTrap::attack(const std::string& target)
     if (this->energy > 0 && this->hit_points > 0)
     {
         --energy;
-        std::cout << "ClapTrap " << name << " attacks " << target << std::endl;
+        std::cout << "ScavTrap " << name << " attacks " << target << std::endl;
     }
     else
-        std::cout << "ClapTrap " << name << " no energy or hp to atack" << std::endl;
+        std::cout << "ScavTrap " << name << " no energy or hp to atack" << std::endl;
 
 }
 

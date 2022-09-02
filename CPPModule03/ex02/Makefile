@@ -1,10 +1,10 @@
 NAME =							run
 
-SRCS =							main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS =							main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ_DIR =						obj
 
-HEADERS =						ClapTrap.hpp ScavTrap.hpp 
+HEADERS =						ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 OBJ =							$(addprefix $(OBJ_DIR)/, $(patsubst %.cpp, %.o, $(SRCS)))
 
