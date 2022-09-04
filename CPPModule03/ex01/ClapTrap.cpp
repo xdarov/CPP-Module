@@ -3,16 +3,21 @@
 ClapTrap::ClapTrap()
 {
     std::cout << "New default ClapTrap " << std::endl;
-
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
     std::cout << "New ClapTrap " << name << std::endl;
+    ClapTrap(name, 10, 10, 0);
+}
+
+ClapTrap::ClapTrap(std::string name, int e, int h, int a)
+{
+    std::cout << "New ClapTrap " << name << std::endl;
     this->name = name;
-    energy = 10;
-    hit_points = 10;
-    attack_damage = 0;
+    energy = e;
+    hit_points = h;
+    attack_damage = a;
 }
 
 ClapTrap::~ClapTrap()

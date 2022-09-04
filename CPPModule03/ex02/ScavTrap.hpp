@@ -11,7 +11,6 @@ class ScavTrap : public ClapTrap
     int energy;
     int attack_damage;
 
-
     public:
     ScavTrap();
     ScavTrap(std::string);

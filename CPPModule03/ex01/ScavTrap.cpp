@@ -1,11 +1,11 @@
 #include  "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap():ClapTrap()
 {
     std::cout << "New default ScavTrap " << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name):ClapTrap(name, 50, 100, 20)
 {
     std::cout << "New ScavTrap " << name << std::endl;
     this->name = name;

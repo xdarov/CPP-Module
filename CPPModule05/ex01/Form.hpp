@@ -22,16 +22,8 @@ class Form
     bool get_is_signed();
     int get_grade_to_execute();
     int get_grade_to_sign();
+    void beSigned(Bureaucrat bur);
 
-    class GradeTooHighException : public std::runtime_error {
-	public: GradeTooHighException(const std::string &error) : std::runtime_error
-	(error) {};
-	};
-
-	class GradeTooLowException : public std::runtime_error {
-	public: GradeTooLowException(const std::string &error) : std::runtime_error
-	(error) {};
-	};
 };
 
 #endif

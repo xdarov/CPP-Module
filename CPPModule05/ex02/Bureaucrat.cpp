@@ -50,23 +50,28 @@ void Bureaucrat::decrement()
         throw Bureaucrat::GradeTooHighException("The grade is to low\n");
 }
 
-std::string Bureaucrat::get_name()
+std::string Bureaucrat::get_name() const
 {
     return this->name;
 }
 
-int Bureaucrat::get_grade()
+int Bureaucrat::get_grade() const
 {
     return this->grade;
 }
 
-void Bureaucrat::signForm(bool &is_signed, std::string form)
+bool Bureaucrat::signForm(Form &form) 
 {
-    if (is_signed == false)
+    if (form.get_is_signed() == false)
     {
-        is_signed = true;
-        std::cout << this->name << " signed " << form << std::endl;
+        std::cout << this->name << " signed " << form.get_name() << std::endl;
+        return true;
     }
-    else
-        std::cout << form << " already signed" << std::endl;
+    std::cout << form.get_name() << " already signed" << std::endl;
+    return false;
+}
+
+void  Bureaucrat::executeForm(Form const & form) const
+{
+    std::cout << this->get_name() << " executed " << form.get_name() << std::endl;
 }

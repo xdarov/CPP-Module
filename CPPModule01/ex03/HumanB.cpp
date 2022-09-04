@@ -9,9 +9,11 @@ HumanB::~HumanB(){}
 
 void HumanB::attack()
 {
+    if (weapon == NULL)
+        return;
     std::cout << name
               << " attacks with their "
-              << (*weapon).getType()
+              << weapon->getType()
               << std::endl;
 }
 

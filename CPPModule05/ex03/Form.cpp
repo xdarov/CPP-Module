@@ -28,29 +28,33 @@ grade_to_execute(other.grade_to_execute), grade_to_sign(other.grade_to_sign)
 
 }
 
-std::string Form::get_name()
+std::string Form::get_name() const
 {
     return this->name;
 }
 
-bool Form::get_is_signed()
+bool Form::get_is_signed() const
 {
     return this->is_signed;
 }
 
-int Form::get_grade_to_execute()
+int Form::get_grade_to_execute() const
 {
     return this->grade_to_execute;
 }
 
-int Form::get_grade_to_sign()
+int Form::get_grade_to_sign() const
 {
     return this->grade_to_sign;
 }
 
-void Form::beSigned(Bureaucrat bur)
+void Form::beSigned(Bureaucrat &bur)
 {
     if (this->grade_to_sign < bur.get_grade())
         throw Bureaucrat::GradeTooLowException("The grade is too low");
-    bur.signForm(this->is_signed, this->name);
+    if (bur.signForm(*this))
+        this->is_signed = true;
 }
+
+
+    

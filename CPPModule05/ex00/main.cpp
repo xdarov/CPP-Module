@@ -11,12 +11,16 @@ int main(void){
     {
         Bureaucrat bad = Bureaucrat("Halk", 0);
     }
-    catch (Bureaucrat::GradeTooLowException &e) {
+    catch (Bureaucrat::GradeTooHighException &e)
+    {
         std::cout <<"Error: "  << e.what() << std::endl;
     }
-    try{
+    try
+    {
         Bureaucrat newBur = Bureaucrat("BBB", 155);
-    } catch (Bureaucrat::GradeTooHighException &e) {
+    } 
+    catch (Bureaucrat::GradeTooLowException &e)
+    {
         std::cout <<"Error: "  << e.what() << std::endl;
     }
     return (0);
