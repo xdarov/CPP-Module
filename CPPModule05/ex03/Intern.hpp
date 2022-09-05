@@ -2,8 +2,9 @@
 #define CPP_INTERN_HPP
 #include "Form.hpp"
 
-class Intern {
-public:
+class Intern
+{
+	public:
 	Intern();
 	~Intern();
 	Intern(const Intern &intern);
