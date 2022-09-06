@@ -48,7 +48,7 @@ int Form::get_grade_to_sign()
     return this->grade_to_sign;
 }
 
-void Form::beSigned(Bureaucrat bur)
+void Form::beSigned(Bureaucrat &bur)
 {
     if (this->grade_to_sign < bur.get_grade())
         throw Bureaucrat::GradeTooLowException("The grade is too low");

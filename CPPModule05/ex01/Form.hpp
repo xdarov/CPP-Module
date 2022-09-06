@@ -22,7 +22,7 @@ class Form
     bool get_is_signed();
     int get_grade_to_execute();
     int get_grade_to_sign();
-    void beSigned(Bureaucrat bur);
+    void beSigned(Bureaucrat &bur);
 
 };
 
