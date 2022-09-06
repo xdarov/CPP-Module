@@ -15,5 +15,4 @@ struct Serialization
 uintptr_t serialize(Serialization* ptr);
 Serialization* deserialize(uintptr_t raw);
 
-
 #endif

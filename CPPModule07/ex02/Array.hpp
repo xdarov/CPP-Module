@@ -78,4 +78,4 @@ T &Array<T>::operator[](unsigned int index)
 
 
 
-#endif //CPP_ARRAY_HPP
+#endif
