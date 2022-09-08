@@ -1,5 +1,6 @@
 #ifndef CPP_MUTANTSTACK_HPP
 #define CPP_MUTANTSTACK_HPP
+
 #include <iostream>
 #include <string>
 #include <stack>
@@ -14,16 +15,19 @@ public:
 		~MutantStack() {};
 		MutantStack(const MutantStack<T> &mutantStack) : std::stack<T>
 		        (mutantStack) {};
-		MutantStack const &operator=(MutantStack<T> &mutantStack){
+		MutantStack const &operator=(MutantStack<T> &mutantStack)
+		{
 			std::stack<T>::operator=(mutantStack);
 			return (*this);
 		}
 
-		iterator begin(){
+		iterator begin()
+		{
 			return this->c.begin();
 		}
 
-		iterator end(){
+		iterator end()
+		{
 			return this->c.end();
 		}
 };

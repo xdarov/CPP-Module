@@ -34,7 +34,7 @@ void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator
 }
 
 int Span::longestSpan()
- {
+{
     int min_val, max_val;
     if (this->vector.size() < 2)
         throw std::runtime_error("the container contains less than two elements");
@@ -44,7 +44,7 @@ int Span::longestSpan()
 }
 
 int Span::shortestSpan()
- {
+{
     int res = INT_MAX;
     if (this->vector.size() < 2)
         throw std::runtime_error("the container contains less than two elements");
